@@ -24,10 +24,11 @@ let menuList = []
 
 
 //these link the buttons to their respective tasks: Veggie and Protein
-let button = document.querySelector("#buttonOne");
-let buttonTwo = document.querySelector("#buttonTwo");
-let answer = document.querySelector("#answer");
-let answerTwo = document.querySelector("#answerTwo");
+
+let button = document.querySelector("#buttonOne");  //protein button
+let buttonTwo = document.querySelector("#buttonTwo");  //veggie button
+let answer = document.querySelector("#answer"); //protein answer box
+let answerTwo = document.querySelector("#answerTwo"); // veggie answer box
 
 //function for selectin random protein dishes
 button.addEventListener("click", function(){

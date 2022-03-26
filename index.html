@@ -10,27 +10,43 @@
     <title>Meal App</title>
 </head>
 <body>
+
+    <!-- Header  -->
     <div class="container text-center bg-white p-4" id="content" >
-        <h1>This is my menu picker</h1>
+        <h1 class="fs-1 fw-bold">This is my menu picker</h1>
         <h2 class="p-4">What am I going to eat this week?</h2>
-        <!-- <textarea name="" id="questionArea" cols="30" rows="3"></textarea> -->
     </div>
 
+    <!-- Button and answers for protein -->
     <div class="row">
         <div class="col m-auto text-center">
             <button class=" btn-dark btn-lg" id="buttonOne">Click me for a Protein Dish</button>
             <div class="mt-4" id="eightBall">
                 <p class="bg-light p-4 text-dark" id="answer"> Answer is Here </p>
+                <!-- button to add the dish to the menu -->
+                <button type="button" class="btn btn-outline-light" id="menuButtonProtein">Add to Menu</button>
             </div>
         </div>
-    
+    <!-- Button and answers for veggie -->
         <div class="col m-auto text-center">
             <button class=" btn-dark btn-lg" id="buttonTwo">Click me for a Veggie Dish</button>
             <div class="mt-4" id="eightBall">
                 <p class="bg-light p-4 text-dark" id="answerTwo"> Answer is Here </p>
+                <!-- button to add the dish to the menu -->
+                <button type="button" class="btn btn-outline-light" id="menuButtonVeggie">Add to Menu</button>
             </div>
         </div>
-    
+    </div>
+
+
+    <!-- Menu starts here -->
+    <div class="row">
+        <div class="col p-4 mt-4 text-center fs-1 fw-bold">Weekly Menu</div>
+    </div>
+    <!-- Content for the menu goes here. This contains the background image. -->
+    <div class="container d-flex justify-content-center">
+        <!-- This is where dishes will get added after pressing the "add to menu" buttons for either protein or veggie -->
+        <div class="col text-center fs-1 mw-50 fw-bold bg-primary" id="menu"></div>
     </div>
 
 

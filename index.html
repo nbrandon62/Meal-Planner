@@ -22,7 +22,7 @@
         <div class="col m-auto text-center">
             <button class=" btn-dark btn-lg" id="buttonOne">Click me for a Protein Dish</button>
             <div class="mt-4" id="eightBall">
-                <p class="bg-light p-4 text-dark" id="answer"> Answer is Here </p>
+                <p class="bg-light p-4 text-dark" id="answer"></p>
                 <!-- button to add the dish to the menu -->
                 <button type="button" class="btn btn-outline-light" id="menuButtonProtein">Add to Menu</button>
             </div>
@@ -31,7 +31,7 @@
         <div class="col m-auto text-center">
             <button class=" btn-dark btn-lg" id="buttonTwo">Click me for a Veggie Dish</button>
             <div class="mt-4" id="eightBall">
-                <p class="bg-light p-4 text-dark" id="answerTwo"> Answer is Here </p>
+                <p class="bg-light p-4 text-dark" id="answerTwo"></p>
                 <!-- button to add the dish to the menu -->
                 <button type="button" class="btn btn-outline-light" id="menuButtonVeggie">Add to Menu</button>
             </div>
@@ -44,9 +44,11 @@
         <div class="col p-4 mt-4 text-center fs-1 fw-bold">Weekly Menu</div>
     </div>
     <!-- Content for the menu goes here. This contains the background image. -->
-    <div class="container d-flex justify-content-center">
-        <!-- This is where dishes will get added after pressing the "add to menu" buttons for either protein or veggie -->
-        <div class="col text-center fs-1 mw-50 fw-bold bg-primary" id="menu"></div>
+    <div class="container d-flex justify-content-center" id="menu">
+        <!-- <div class="col-md-4"></div> -->
+        <div class="col-md-8 p-3 fs-3 fw-bold mt-4" id="menuText"></div>
+        <!-- <div class="col-md-1"></div>
+        <div class="col-md-1"></div> -->
     </div>
 
 

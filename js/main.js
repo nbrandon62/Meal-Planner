@@ -8,7 +8,7 @@ let proteinMeals = [
 ];
 
 let veggieMeals = [
-    ' hot and sour collards', ' curry cauliflower', ' brown butter carrots ',' garlic pea shoots with nut broth ', ' garlic chili eggplant ', ' pineapple fried rice ', ' broccolini and anchovy breacrumbs',' coconut and potato soup',' black bean chili yuba with lap cheong', ' seared cabbage with tahini caesar', ' mushroom and allium fried rice', ' sashimi salad and soup', ' miso soup, veggies, and salmon', ' chicken caesar salad wraps', ' cobb salad', ' roasted veggie toast', ' chilled sesame noodles', ' veggie crudite with bagna cauda and green tahini', ' chilled green tahini noodles with scallion ginger sauce', ' mushroom tartine', ' bucatini amatraciana', 'spring vegetables ragu and poached egg', 'creamy mushroom pasta', 'kale caesar salad', 'cabbage salad with candied nuts and lemon vin', 'loaded baked potato', 'burrata and pesto foccacia', 'veggie bowls', 'burrata and peas', 'potato breakfast burritos', 'eggplant parm', 'grilled veggies with crunchy garlic', 'salade lyonnaise', ''
+    'hot and sour collards', 'curry cauliflower', 'brown butter carrots ','garlic pea shoots with nut broth ', 'garlic chili eggplant ', 'pineapple fried rice ', 'broccolini and anchovy breacrumbs','coconut and potato soup','black bean chili yuba with lap cheong', 'seared cabbage with tahini caesar', 'mushroom and allium fried rice', 'sashimi salad and soup', 'miso soup, veggies, and salmon', 'chicken caesar salad wraps', 'cobb salad', 'roasted veggie toast', 'chilled sesame noodles', ' veggie crudite with bagna cauda and green tahini', 'chilled green tahini noodles with scallion ginger sauce', 'mushroom tartine', 'bucatini amatraciana', 'spring vegetables ragu and poached egg', 'creamy mushroom pasta', 'kale caesar salad', 'cabbage salad with candied nuts and lemon vin', 'loaded baked potato', 'burrata and pesto foccacia', 'veggie bowls', 'burrata and peas', 'potato breakfast burritos', 'eggplant parm', 'grilled veggies with crunchy garlic', 'salade lyonnaise', ''
 ];
 
 
@@ -18,34 +18,41 @@ function addToMenu (mealString) { //inputs String
  
 }
 
-let menuList = [] 
-//is an Array and Stores Strings
-//this will eventually be the place that lands all of the selected dish items to create my weekly menu. 
+let menuList = [] //is an Array and Stores Strings
 
 
 //these link the buttons to their respective tasks: Veggie and Protein
-
 let button = document.querySelector("#buttonOne");  //protein button
 let buttonTwo = document.querySelector("#buttonTwo");  //veggie button
 let answer = document.querySelector("#answer"); //protein answer box
 let answerTwo = document.querySelector("#answerTwo"); // veggie answer box
 
-//function for selectin random protein dishes
+
+//function for selecting random protein dishes
 button.addEventListener("click", function(){
-    let meal = pickRandomMeal(proteinMeals);
-    answerText = meal;
+    let proteinDish = pickRandomMeal(proteinMeals);
+    answerProtein = proteinDish;
+    answer.innerHTML = answerProtein;
 
-    answer.innerHTML = answerText;
+        //this controls the "add to menu" button. uses the local variable answerProtein. But the bug is that it adds the dish as many times as the "random" or "add to menu" buttons are clicked. 
+        let addButtonProtein = document.querySelector("#menuButtonProtein");
+        let menu = document.querySelector("#menuText");
 
+        addButtonProtein.addEventListener("click", function(){
+            
+            addToMenu(answerProtein);
+            menuText.innerHTML = menuList;
+        })
 })
+
+
 
 //function for selecting random veggie dishes
 buttonTwo.addEventListener("click", function(){
-    let meal = pickRandomMeal(veggieMeals);
+    let veggieDish = pickRandomMeal(veggieMeals);
 
-    answerText = meal;
+    answerVeggie = veggieDish;
 
-    answerTwo.innerHTML = answerText;
+    answerTwo.innerHTML = answerVeggie;
 
 })
-

@@ -12,10 +12,10 @@ menuList = [];
 
 
 //these link the buttons to their respective tasks: Veggie and Protein
-let buttonPro = document.querySelector("#buttonOne");  //protein button
-let buttonVeg = document.querySelector("#buttonTwo");  //veggie button
-let answer = document.querySelector("#answer"); //protein answer box
-let answerTwo = document.querySelector("#answerTwo"); // veggie answer box
+let buttonPro = document.querySelector("#buttonPro");  //protein button
+let buttonVeg = document.querySelector("#buttonVeg");  //veggie button
+let answerPro = document.querySelector("#answerPro"); //protein answer box
+let answerVeg = document.querySelector("#answerVeg"); // veggie answer box
 
 let addProBtn = document.querySelector("#menuBtnPro");
 let addVegBtn = document.querySelector("#menuBtnVeg");
@@ -59,16 +59,16 @@ function pickDish(dish){
     let veggieDish = pickRandomMeal(veggieMeals);
 
     if (dish === 'protein'){
-        answer.innerHTML = proteinDish;
+        answerPro.innerHTML = proteinDish;
     }else if (dish === 'veggie'){
-        answerTwo.innerHTML = veggieDish;
+        answerVeg.innerHTML = veggieDish;
 
     }
 }
 
 function addToList(dish){
-    let addProtein = answer.innerHTML
-    let addVeggie = answerTwo.innerHTML
+    let addProtein = answerPro.innerHTML
+    let addVeggie = answerVeg.innerHTML
 
     if (dish ==="protein"){
         addToMenu(addProtein)

@@ -73,12 +73,10 @@ function addToList(dish){
 
     if (dish ==="protein"){
         addToMenu(addProtein);
-        makeList();
-        // menuText.innerHTML = menuList
+        makeList(); //turns output into bulletpoint 
     }else if (dish === "veggie") {
         addToMenu(addVeggie)
-        // menuText.innerHTML = menuList
-        makeList();
+        makeList(); // turns output into bulletpoint
 
     }
 }
